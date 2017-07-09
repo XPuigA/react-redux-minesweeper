@@ -1,0 +1,48 @@
+{
+  "name": "codingfacts",
+  "version": "1.0.0",
+  "description": "React+Redux tutorial",
+  "main": "src/server/index.js",
+  "scripts": {
+    "test": "test",
+    "webpack": "webpack --progress --colors --watch",
+    "nodemon": "nodemon -e js,jsx"
+  },
+  "author": "CodingFacts",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-react-views": "^0.10.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-engine": "^4.3.0",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-thunk": "^1.0.0",
+    "redux": "^3.7.1",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "jsx-loader": "^0.13.2",
+    "node-libs-browser": "^2.0.0",
+    "nodemon": "^1.11.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.2.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
