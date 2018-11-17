@@ -24,6 +24,10 @@ class Main extends React.Component {
   }
 }
 
+Main.defaultProps = {
+  number: '#',
+};
+
 Main.propTypes = {
   dispatch: PropTypes.func.isRequired,
   number: PropTypes.string,

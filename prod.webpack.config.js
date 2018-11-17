@@ -35,5 +35,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({ filename: '[name].css', disable: false, allChunks: false }),
+    new webpack.optimize.UglifyJsPlugin({minimize: true})
   ]
 };
