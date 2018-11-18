@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import testReducer from './TestReducer.js';
+import boardReducer from './BoardReducer.js';
 
 
 const MainReducer = combineReducers({
-  testReducer,
+  boardReducer,
 });
 
 export default MainReducer;

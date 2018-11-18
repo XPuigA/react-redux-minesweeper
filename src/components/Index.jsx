@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import MainReducer from '../redux/reducers/MainReducer';
-
 import Main from '../components/Main.jsx';
 import NotFound from '../components/NotFound.jsx';
 
