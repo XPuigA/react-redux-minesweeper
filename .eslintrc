@@ -18,6 +18,7 @@
 	  "no-param-reassign": 0,
 	  "jsx-a11y/no-static-element-interactions": 0,
 	  "max-len": ["error", 150],
+	  "react/no-array-index-key": 0,
     },
 	"globals": {
 		"document": true,

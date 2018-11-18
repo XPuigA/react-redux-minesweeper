@@ -1,21 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Cell from './Cell.jsx';
 
 class Board extends React.Component {
 
-  generateCell(cell, rowIndex, colIndex) {
-    return (
-      <td key={colIndex} id={`cell_${rowIndex}_${colIndex}`}>
-        { cell.isMine ? 'M' : cell.value }
-      </td>
-    );
-  }
-
   generateRow(row, rowIndex) {
     return (
-      <tr key={rowIndex}>
-        {row.map((cell, colIndex) => this.generateCell(cell, rowIndex, colIndex))}
+      <tr key={`row_${rowIndex}`}>
+        {row.map((cell, colIndex) => <Cell key={`cell_${rowIndex}_${colIndex}`} cell={cell} rowIndex={rowIndex} colIndex={colIndex} />)}
       </tr>
     );
   }
@@ -27,7 +20,7 @@ class Board extends React.Component {
           {board.map((row, rowIndex) => this.generateRow(row, rowIndex))}
         </tbody>
       </table>
-    )
+    );
   }
 
   render() {
