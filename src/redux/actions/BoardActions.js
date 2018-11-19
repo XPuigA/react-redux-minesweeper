@@ -9,6 +9,9 @@ export function newBoard() {
   return {
     type: NEW_BOARD,
     board: new BoardGenerator().generate(),
+    totalRows: 10,
+    totalColumns: 10,
+    totalMines: 10,
   };
 }
 

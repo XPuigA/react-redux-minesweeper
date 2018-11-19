@@ -12,8 +12,8 @@ class Cell extends React.Component {
     this.unflag = this.unflag.bind(this);
   }
 
-  getCellContent(cell) {
-    if (cell.isDisplayed) {
+  getCellContent(cell, gameFinished) {
+    if (cell.isDisplayed || gameFinished) {
       return cell.isMine ? 'M' : cell.value;
     } else if (cell.isFlagged) {
       return (
@@ -54,10 +54,10 @@ class Cell extends React.Component {
   }
 
   render() {
-    const { cell, rowIndex, colIndex } = this.props;
+    const { cell, rowIndex, colIndex, gameFinished } = this.props;
     return (
       <td id={`cell_${rowIndex}_${colIndex}`} style={{ width: '25px', height: '25px', textAlign: 'center' }}>
-        {this.getCellContent(cell)}
+        {this.getCellContent(cell, gameFinished)}
       </td>
     );
   }
@@ -68,6 +68,7 @@ Cell.propTypes = {
   cell: PropTypes.object.isRequired,
   rowIndex: PropTypes.number.isRequired,
   colIndex: PropTypes.number.isRequired,
+  gameFinished: PropTypes.bool.isRequired,
 };
 
 export default connect()(Cell);
