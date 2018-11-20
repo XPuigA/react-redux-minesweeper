@@ -34,8 +34,7 @@ class Board extends React.Component {
   }
 
   render() {
-    const { board, isGameOver, isGameWinned } = this.props;
-    const gameFinished = isGameOver || isGameWinned;
+    const { board, gameFinished } = this.props;
     if (!board) return null;
     return this.generateBoard(board, gameFinished);
   }
@@ -43,19 +42,17 @@ class Board extends React.Component {
 
 Board.defaultProps = {
   board: undefined,
-  isGameOver: false,
-  isGameWinned: false,
+  gameFinished: false,
 };
 
 Board.propTypes = {
   board: PropTypes.array,
-  isGameOver: PropTypes.bool,
-  isGameWinned: PropTypes.bool,
+  gameFinished: PropTypes.bool,
 };
 
 function mapStateToProps(state) {
   const { board, isGameOver, isGameWinned } = state.gameReducer;
-  return { board, isGameOver, isGameWinned };
+  return { board, gameFinished: isGameOver || isGameWinned };
 }
 
 export default connect(mapStateToProps)(Board);
