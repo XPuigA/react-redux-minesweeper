@@ -7,9 +7,9 @@ class Message extends React.Component {
   render() {
     const { isGameOver, isGameWinned } = this.props;
     if (isGameOver) {
-      return (<div>Game Over</div>);
+      return (<div className="lostMessage">Game Over</div>);
     } else if (isGameWinned) {
-      return (<div>Game won</div>);
+      return (<div className="winMessage">Game won</div>);
     }
     return null;
   }

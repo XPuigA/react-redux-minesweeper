@@ -14,11 +14,11 @@ class Cell extends React.Component {
 
   getCellContent(cell, gameFinished) {
     if (cell.isDisplayed || gameFinished) {
-      return cell.isMine ? 'M' : cell.value;
+      return <div className="cell">{cell.isMine ? 'M' : cell.value}</div>;
     } else if (cell.isFlagged) {
       return (
         <button
-          style={{ width: '25px', height: '25px', textAlign: 'center' }}
+          className="cell"
           onContextMenu={this.unflag}
         >
           {'*'}
@@ -27,7 +27,7 @@ class Cell extends React.Component {
     }
     return (
       <button
-        style={{ width: '25px', height: '25px', textAlign: 'center' }}
+        className="cell"
         onClick={this.display}
         onContextMenu={this.flag}
       >
@@ -56,7 +56,7 @@ class Cell extends React.Component {
   render() {
     const { cell, rowIndex, colIndex, gameFinished } = this.props;
     return (
-      <td id={`cell_${rowIndex}_${colIndex}`} style={{ width: '25px', height: '25px', textAlign: 'center' }}>
+      <td id={`cell_${rowIndex}_${colIndex}`} className="center">
         {this.getCellContent(cell, gameFinished)}
       </td>
     );

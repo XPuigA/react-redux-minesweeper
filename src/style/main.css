@@ -1,0 +1,20 @@
+.cell {
+  width: 25px;
+  height: 25px;
+}
+
+.center {
+  text-align: center;
+}
+
+.winMessage {
+  color: #00FF00;
+  background-color: #cae597;
+  font-weight: bold;
+}
+
+.lostMessage {
+  color: #FF0000;
+  background-color: #d38470;
+  font-weight: bold;
+}

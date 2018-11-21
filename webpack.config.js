@@ -6,6 +6,7 @@ module.exports = {
   devtool: 'inline-sourcemap',
   entry: [
   	path.resolve('src/components/Index.jsx'),
+    path.resolve('src/style/main.css')
   ],
   output: {
     path: path.resolve('build'),
